@@ -15,7 +15,12 @@ jobs:
           channel: 'stable'
           architecture: x64
       - run: flutter pub get
-      
+
+      - name: Create api_key.dart
+        run: |
+          mkdir -p lib/core
+          echo "const String apiKey = '${{ secrets.API_KEY }}';" > lib/core/api_key.dart
+
       - run: pod repo update
         working-directory: ios
 
@@ -51,6 +56,11 @@ jobs:
           channel: 'stable'
           architecture: x64
       - run: flutter pub get
+
+      - name: Create api_key.dart
+        run: |
+          mkdir -p lib/core
+          echo "const String apiKey = '${{ secrets.API_KEY }}';" > lib/core/api_key.dart
 
       - run: flutter build apk --release
 
