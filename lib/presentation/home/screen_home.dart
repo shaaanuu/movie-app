@@ -56,10 +56,10 @@ class ScreenHome extends StatelessWidget {
           const CategoryWidget(),
           kHeight10,
           const MovieTypeText(txt: 'Movies'),
-          MovieCategory(),
+          const MovieCategory(),
           kHeight10,
           const MovieTypeText(txt: 'TV shows'),
-          MovieCategory(),
+          const MovieCategory(),
         ],
       ),
     );

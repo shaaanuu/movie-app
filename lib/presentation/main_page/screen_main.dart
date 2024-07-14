@@ -11,9 +11,9 @@ class ScreenMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> pages = [
-      ScreenHome(),
-      ScreenCategories(),
-      ScreenTrending(),
+      const ScreenHome(),
+      const ScreenCategories(),
+      const ScreenTrending(),
     ];
 
     List<NavigationDestination> navigationDestinations = const [

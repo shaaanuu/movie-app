@@ -12,29 +12,34 @@ class MovieTypeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          margin: const EdgeInsets.all(10),
-          height: 200,
-          width: 150,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(23),
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: NetworkImage(poster),
+    return SizedBox(
+      width: 180,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: const EdgeInsets.all(10),
+            height: 200,
+            width: 150,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(23),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(poster),
+              ),
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 28),
-          child: Text(
-            movieName,
-            style: const TextStyle(fontSize: 16, color: Colors.white),
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Text(
+              movieName,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              style: const TextStyle(fontSize: 16, color: Colors.white),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

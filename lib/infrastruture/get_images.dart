@@ -20,7 +20,7 @@ Future getMovies() async {
 
   for (var eachTeams in jsonData['results']) {
     final movie = Movie(
-      title: eachTeams['title'].toString(),
+      title: eachTeams['title']?.toString() ?? eachTeams['name'].toString(),
       image: baseURLImage + eachTeams['poster_path'],
       overview: eachTeams['overview'],
     );

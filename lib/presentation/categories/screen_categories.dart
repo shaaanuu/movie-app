@@ -26,7 +26,7 @@ class ScreenCategories extends StatelessWidget {
           children: [
             kHeight10,
             MovieTypeText(txt: movieCategoryType[index]),
-            MovieCategory(),
+            const MovieCategory(),
           ],
         ),
       ),

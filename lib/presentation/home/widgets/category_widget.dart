@@ -36,13 +36,13 @@ class CategoryWidget extends StatelessWidget {
             children: [
               Text(
                 categoryEmoji[index],
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
               ),
               Text(
                 categoryName[index],
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 13,
                   fontWeight: FontWeight.w300,

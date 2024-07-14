@@ -12,7 +12,7 @@ class ScreenSeeMore extends StatelessWidget {
       appBar: AppBar(),
       body: GridView.builder(
         itemCount: moviesList.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisExtent: 280,
         ),
